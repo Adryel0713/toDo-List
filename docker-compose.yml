@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: spring_app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dpg-d2g2hnvdiees73d002u0-a.oregon-postgres.render.com:5432/backend_postgres_movp
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: p5m3EDemjyRxCOJcGvoWPCPMaMuaS9gB
+    restart: unless-stopped
